@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Play Chatbot Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Character Selection Panel -->
+        <div class="character-panel">
+            <h2>🎭 Choose Your Character</h2>
+            <div class="character-grid">
+                <button class="char-btn" data-character="detective">🔍 Detective</button>
+                <button class="char-btn" data-character="wizard">🧙 Wizard</button>
+                <button class="char-btn" data-character="pirate">⚓ Pirate</button>
+                <button class="char-btn" data-character="knight">🛡️ Knight</button>
+                <button class="char-btn" data-character="explorer">🗺️ Explorer</button>
+                <button class="char-btn" data-character="chef">👨‍🍳 Chef</button>
+                <button class="char-btn" data-character="astronaut">🚀 Astronaut</button>
+                <button class="char-btn" data-character="artist">🎨 Artist</button>
+            </div>
+            <button class="reset-btn" onclick="resetChat()">🔄 Reset Chat</button>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <h1 id="characterName">Select a Character</h1>
+                <p id="characterDesc">Choose a role to begin your adventure!</p>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message system">
+                    <p>👋 Welcome to Role-Play Adventure! Select a character from the left panel to begin your immersive story.</p>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Type your message..." 
+                    disabled
+                >
+                <button id="sendBtn" onclick="sendMessage()" disabled>Send</button>
+            </div>
+
+            <!-- Info Panel -->
+            <div class="info-panel">
+                <h3>📋 Current Role</h3>
+                <p id="roleInfo">No role selected</p>
+                <h3>📖 Story Context</h3>
+                <p id="storyProgress">-</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
